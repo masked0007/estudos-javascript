@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de Multas!</title>
+</head>
+<style>
+    body {
+        background-color:indigo;
+        font: normal 18px;
+        text-decoration-color:aqua
+    }
+</style>
+<body>
+    <h1>Identificador de multas DETRAN!</h1>
+    Velocidade do Carro: <input type="number" name="vel" id="text1"> km/h
+    <input type="button" value="Verificar!" onclick="calcular()">
+    <div id="res">
+        <script>
+            function calcular() {
+                var texv = window.document.querySelector('input#text1')
+                var res = window.document.querySelector('div#res')
+                var vel = Number(texv.value)
+                res.innerHTML = `Você ultrapassou o Limite de ${vel}km/h, você foi <em><strong>MULTADO</strong></em>`
+            }
+        </script>
+
+</body>
+</html>
