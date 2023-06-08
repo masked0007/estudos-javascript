@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script1.js"></script>
+    <style>
+       h1 {
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aqua;
+            width: 600px;
+            font-size: 50px;
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+        div {
+            border: 1px solid rgba(1, 0, 0, 0);
+            margin: auto;
+            width: 700px;
+            height: 620px;
+            border-radius: 10px;
+        }
+        table {
+            background-color: rgba(0, 234, 66, 0.858);
+            margin: auto;
+            width: 700px;
+            height: 600px;
+            border-radius: 10px;
+        }
+        td {
+            color: rgb(0, 68, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            font-size: 100px;
+            border-radius: 10px;
+        }
+        td:hover {
+            background-color: rgb(75, 232, 117);
+            transition: .35s;
+        }
+        p {
+            text-align: center;
+            margin: auto;
+            width: 150px;
+            border-radius: 5px;
+            background-color:rgb(107, 164, 189);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-top: 20px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+        button {
+            background-color: rgb(107, 164, 189);
+            border: none;
+            font-size: 20px;
+            color: rgb(81, 76, 217);
+        }
+
+        </style>
+</head>
+<body>
+    <h1>JOGO DA VELHA</h1>
+    <div>
+        <table border="2">
+            <tr>
+                <td onclick="jogar(this)"></td>
+                <td onclick="jogar(this)"></td>
+                <td onclick="jogar(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="jogar(this)"></td>
+                <td onclick="jogar(this)"></td>
+                <td onclick="jogar(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="jogar(this)"></td>
+                <td onclick="jogar(this)"></td>
+                <td onclick="jogar(this)"></td>
+            </tr>
+        </table>
+        </div>
+       <div>
+        <p>
+        <button onclick="reset()">Reiniciar</button>
+    </p>
+    </div>
+       
+    
+</body>
+</html>
