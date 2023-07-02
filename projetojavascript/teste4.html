@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script4.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            margin: auto;
+            text-align: center;
+        }
+        div {
+            background-color: aqua;
+            width: 500px;
+            height: 500px;
+            text-align: center;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            border-radius: 20px;
+
+        }
+        button {
+            margin-top: 10px;
+        }
+            #text {
+            width: 200px;
+            height: 100px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        footer {
+            margin-top: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>oi</h1>
+    </header>
+    <main>
+        <div id="entre" onmouseenter="entrou()" onmouseout="mudouu()">
+        <p>PASSE O MOUSE AQUI!</p>
+        </div>
+        <button type="reset" onclick="restaure()">RESTAURE PARA COR PADRÃO</button>
+        <br>
+    <input type="text" id="text" placeholder="digite alguma coisa" onfocus="foconainput()" onchange="mudou()" onblur="desfoconainput()" >
+    <br>
+    <p style="width: 200px; height: 200px; text-align: center; background-color: blue;
+     margin: auto; padding-top: 20px";
+    id="paragrafo" onmousedown="mouseabaixo()">aqui</p>
+    </main>
+    <footer>
+        fim...
+    </footer>
+    
+</body>
+</html>

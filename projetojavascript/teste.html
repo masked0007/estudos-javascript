@@ -9,15 +9,60 @@
     <style>
         body {
             text-align: center;
+            background-color: rgb(209, 224, 42);
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            background-color: rgb(64, 230, 122);
+            width: 500px;
+            padding: 30px;
+            font-size: 45px;
+            margin: auto;
+        }
+        div {
+            background-color: aquamarine;
+            width: 900px;
+            height: 500px;
+            margin: auto;
+            border-radius: 20px;
         }
         p {
-            text-align: center;
+            padding-top: 40px;
+            font-size: 30px;
+            font-weight: bolder;
             font-family: Arial, Helvetica, sans-serif;
+        }
+        input {
+            margin-top: 50px;
+            padding: 10px;
+        }
+        button {
+            margin-top: 50px;
+        }
+        #res {
+            font-size: 30px;
+            color: black;
         }
     </style>
 </head>
 <body>
-    <h1>aula de javascript</h1>
-    <p id="texto"></p>
+    <header>
+    <h1>AULA DE JAVASCRIPT</h1>
+    </header>
+    <main>
+        <div>
+        <p>COLOQUE O VALOR E CONVERTAR EM DOLLAR!</p>
+        <br>
+        <input type="number" name="valor1" id="valor1" placeholder="digite o valor REAL">
+        <input type="number" name="valor2" id="valor2" placeholder="digite o valor DOLLAR">
+        <br>
+        <input type="button" value="CONVERTER" onclick="CONVERTER()">
+        <div id="res"><script src="teste1.js"></script></div>
+    </div>
+    </main>
+    <footer>
+        <p>fim</p>
+    </footer>
 </body>
 </html>
