@@ -1,4 +1,4 @@
-var data = new Date()
+/* var data = new Date()
 
 
 var obteranoatual = data.getFullYear();
@@ -18,6 +18,36 @@ var obtermeses = meses[data.getMonth()]
 
 var obeterdias = data.getDay()
 
-var obterhorascompletas = new Date();
+var hours = data.getHours();
+var minutes = data.getMinutes();
+var seconds = data.getMinutes();
+var milliseconds = data.getMilliseconds();
 
-document.getElementById("text").innerText = `Hojer é dia ${obeterdias} de ${obtermeses} do ano ${obteranoatual} as ${obterhorascompletas}`
+
+document.getElementById("text").innerText = `Hojer é dia ${obeterdias} de ${obtermeses} do ano ${obteranoatual} as ${hours}:${minutes}:${seconds}:${milliseconds}`
+
+
+// agora vou exemplificar com um pequeno codigo de validação de identide:
+{
+    let currentyear = new Date()
+    let identity = new Date();
+
+if (currentyear > identity) {
+    console.log("this fuck identity it is vanquished!")
+} else {
+    console.log("all ok bro can go, a have good life!")
+}
+}
+*/
+// agora como mostar a diferença entre 2 datas em dias
+
+function dados() {
+    var vencimento = 2020;
+    var suadata = document.getElementById("data1").textContent;
+    if (suadata <= vencimento) {
+        document.getElementById("dadoss").textContent = "o cartão dentro da validade(;";
+    }
+     else {
+        document.getElementById("dadoss").textContent = "o cartão venceu );";
+    }
+}

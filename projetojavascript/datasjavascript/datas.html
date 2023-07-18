@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,19 @@
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
         }
+        h2 {
+            font-size: 70px;
+        }
+        #data1 {
+            padding: 30px;
+            font-size: 30px;
+        }
+        button {
+            padding: 20px;
+            font-size: 30px;
+            margin-top: 100px;
+            margin: 30px;
+        }
     </style>
 </head>
 <body>
@@ -18,6 +31,12 @@
     <p id="text"></p>
 
 
+<div class="verificador">
+    <h2>avaliador de cartões</h2>
+    <input type="date" name="" id="data1">
+    <button onclick="dados()" id="button1">enviar dados</button>
+    <p id="dadoss"></p>
+</div>
     <footer>
         <script src="datasemjavascript.js"></script>
     </footer>
