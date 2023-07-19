@@ -42,12 +42,5 @@ if (currentyear > identity) {
 // agora como mostar a diferença entre 2 datas em dias
 
 function dados() {
-    var vencimento = 2020;
-    var suadata = document.getElementById("data1").textContent;
-    if (suadata <= vencimento) {
-        document.getElementById("dadoss").textContent = "o cartão dentro da validade(;";
-    }
-     else {
-        document.getElementById("dadoss").textContent = "o cartão venceu );";
-    }
+    
 }
