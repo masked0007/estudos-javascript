@@ -1,46 +1,45 @@
-/* var data = new Date()
+/*//let data = new Date()
 
 
-var obteranoatual = data.getFullYear();
+//OBTER O ANO ATUAL:
+//let obteranoatual = data.getFullYear();
 
 
 // para obter os meses em escrito deve informar eles em uma matriz com os nome dele:
-//var obtermeses = data.getMonth()
+//let obtermeses = data.getMonth()
 //document.getElementById("text").innerText = obtermeses;
 // 2023
 
-var meses = ["janeiro", "fervereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "december"]
-var obtermeses = meses[data.getMonth()]
+//  MANEIRA PARA OBTER OS MESES EM NOMES:
+//let meses = ["janeiro", "fervereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "december"]
+//let obtermeses = meses[data.getMonth()]
 
-// outra meneira de obter data é usando o toLocalstring:
-// var datacompletabr = data.toLocalesString("pt-br", {dataStyle: 'short'});
+// outra meneira de obter data NO fORMATO  BR é usando o toLocalstring:
+// let datacompletabr = data.toLocalesString("pt-br", {dataStyle: 'short'});
 // = dia/mes/ano
 
-var obeterdias = data.getDay()
 
-var hours = data.getHours();
-var minutes = data.getMinutes();
-var seconds = data.getMinutes();
-var milliseconds = data.getMilliseconds();
-
-
-document.getElementById("text").innerText = `Hojer é dia ${obeterdias} de ${obtermeses} do ano ${obteranoatual} as ${hours}:${minutes}:${seconds}:${milliseconds}`
-
-
-// agora vou exemplificar com um pequeno codigo de validação de identide:
-{
-    let currentyear = new Date()
-    let identity = new Date();
-
-if (currentyear > identity) {
-    console.log("this fuck identity it is vanquished!")
-} else {
-    console.log("all ok bro can go, a have good life!")
-}
-}
-*/
-// agora como mostar a diferença entre 2 datas em dias
-
+// METODO PARA COMPARAR UMA VALIDADE COM OUTRA DE ACORDO COM A VALOR DA INPUT:
 function dados() {
-    
+    var input1 = new Date(document.getElementById("data1").value);
+    var vencimento = new Date(2020, 1, 1);
+
+    if (input1 <= vencimento)
+    {
+    document.getElementById("dadoss").textContent = "seu cartão está ativo"
+    } else {
+        document.getElementById("dadoss").textContent = "Seu cartão venceu"
+    }
 }
+
+
+// metodo para obter as datas em valores separados:
+let d = new Date();
+var dia1 = d.getDate();
+var mes2 = d.getMonth() + 1;
+var ano3 = d.getFullYear();
+function addzero(x) {
+   return x < 10 ? '0' + x : '' + x
+};
+document.getElementById("text").textContent = addzero(dia1) + "//" + addzero(mes2) + "//" + addzero(ano3);
+*/

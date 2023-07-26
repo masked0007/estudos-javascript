@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+    <style>
+        body {
+            background-color: rgba(0, 255, 30, 0.854);
+        }
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: 60px;
+        }
+
+        #listadetarefas {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            margin: 15px;
+            padding: 30px;
+            font-size: 30px;
+            border-radius: 10px;
+            background-color: aqua;
+            border: none;
+        }
+        #listadetarefas:hover {
+            cursor: text;
+            scale: 1.1;
+            transition: 0.30s ease-in-out;
+            border: none;
+        }
+        #add {
+            padding: 30px;
+            margin-left: 10px;
+            font-size: 20px;
+            color: green;
+            background-color: greenyellow;
+            border-radius: 10px;
+            border: none;
+        }
+        #add:hover {
+            transition: 0.20s ease-in-out;
+            cursor: pointer;
+            scale: 1.1;
+        }
+
+        #container {
+            margin-top: 120px;
+            text-align: center;
+        }
+        #textcontainer {
+            width: 600px;
+            height: 60px;
+            border-radius: 5px;
+            background-color: aliceblue;
+            display: flex;
+            flex-flow: row wrap;
+            margin-top: 30px;
+            margin-left: 650px;
+        }
+        #areatext {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #icone {
+            margin: 10px;
+        }
+        #texto {
+            margin: 10px;
+            font-size: 20px;
+        }
+        #deletar {
+            margin-left: 300px;
+        }
+        .delete {
+        }
+</style>
+
+</head>
+<body>
+    <h1>PROJETO DE LISTA DE TAREFAS</h1>
+    <div id="container">
+        <input type="text" name="lista" id="listadetarefas" placeholder="digite a tarefa!">
+        <button id="add" onclick="adicionar()">Adicionar</button>
+    </div>
+    <main id="textcontainer">
+            <div id="areatext">
+                <div id="icone">ico</div>
+                <div id="texto">lista de afazeres</div>
+                <button id="deletar" ><i class="fa-solid fa-trash"></i>delete</button>
+            </div>
+    </main>
+
+    <script src="listadetarefas.js"></script>
+</body>
+
+</html>
