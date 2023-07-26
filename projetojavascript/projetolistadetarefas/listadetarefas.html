@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -21,6 +21,7 @@
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bolder;
             margin: 15px;
+            margin-left: 600px;
             padding: 30px;
             font-size: 30px;
             border-radius: 10px;
@@ -52,51 +53,84 @@
             margin-top: 120px;
             text-align: center;
         }
-        #textcontainer {
-            width: 600px;
-            height: 60px;
-            border-radius: 5px;
-            background-color: aliceblue;
-            display: flex;
-            flex-flow: row wrap;
-            margin-top: 30px;
-            margin-left: 650px;
-        }
-        #areatext {
+        .textcontainer {
+            width: 45%;
+            height: 100px;
+            border-radius: 20px;
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
             align-items: center;
+            margin: auto auto;
+            margin-bottom: 10px;
         }
-        #icone {
-            margin: 10px;
+        .areatext {
+            width: 100%;
+            background: aliceblue;
+            height: 100px;
+            display: flex;
+            border-radius: 10px;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
         }
-        #texto {
-            margin: 10px;
+        .icone {
+            text-indent: 30px;
+            font-size: 50px;
+        }
+        .texto {
+            display: flex;
+            margin: auto;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+        .deletar {
             font-size: 20px;
-        }
-        #deletar {
-            margin-left: 300px;
-        }
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            border-radius: 10px;
+            height: 100px;
+            width: 150px;
+            background-color: red;
+            }
+            #deletar:hover {
+                color: white;
+            }
+            .fa-circle-check {
+                color: rgb(0, 255, 0);
+            }
+            .areatext.clicado {
+                background-color: rgb(127, 255, 212);
+            }
+            .areatext.clicado .texto {
+                text-decoration: line-through;
+                color: gray;
+            }
 </style>
 
 </head>
 <body>
     <h1>PROJETO DE LISTA DE TAREFAS</h1>
-    <div id="container">
+    <div class="container">
         <input type="text" name="lista" id="listadetarefas" placeholder="digite a tarefa!">
         <button id="add" onclick="adicionar()">Adicionar</button>
     </div>
-    <main id="textcontainer">
-            <div id="areatext">
-                <div id="icone">ico</div>
-                <div id="texto">lista de afazeres</div>
-                <button id="deletar">delete</button>
-                <i class="fa-solid fa-trash"></i>
+    <main id="conteudo1" class="textcontainer">
+            <div class="areatext">
+                <div class="icone"><i class="fa-regular fa-circle"></i></div>
+                <div class="texto">lista de afazeres</div>
+                <div><button class="deletar"><i class="fa-solid fa-trash" style="margin: 5px;"></i>delete</button></div>
             </div>
     </main>
-
+    <main class="textcontainer">
+        <div class="areatext clicado">
+            <div class="icone"><i class="fa-regular fa-circle-check"></i></div>
+            <div class="texto">teste</div>
+            <div><button class="deletar"><i class="fa-solid fa-trash" style="margin: 5px;"></i>deletar</button></div>
+        </div>
+        </main>
     <script src="listadetarefas.js"></script>
 </body>
-
 </html>
