@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+    <style>
+        body {
+            background-color: rgb(215, 246, 168);
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header {
+            width: 50%;
+            display: flex;
+            flex-flow: row wrap;
+            margin: auto auto;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 30px;
+        }
+
+        #listadetarefas {
+            text-indent: 30px;
+            height: 100px;
+            width: 500px;
+            border: none;
+            font-size: 30px;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            cursor: text;
+        }
+        #adicionar {
+            cursor: pointer;
+            background-color: greenyellow;
+            height: 100px;
+            width: 10%;
+            border-radius: 5px;
+            border: none;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+
+        .fa-check:hover {
+            color: white;
+            transition: .25s;
+            scale: 1.3;
+        }
+
+        #items-container {
+            margin: auto auto;
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+        .items {
+            height: 100px;
+            width: 60%;
+            display: flex;
+            border-radius: 5px;
+            flex-flow: row wrap;
+            background: white;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .icone {
+            flex: 20%;
+            text-indent: 20px;
+            font-size: 40px;
+        }
+
+        .textos {
+            font-size: 30px;
+            flex: 55%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+
+        .delete {
+            height: 99px;
+            background-color: red;
+            border-radius: 5px;
+            flex: 15%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+
+        .delete:hover {
+            transition: 0.35s;
+            color: whitesmoke;
+        }
+
+        .items.clicado {
+            background-color: rgba(156, 224, 223, 0.757);
+        }
+
+        .items.clicado .textos {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .fa-circle {
+            cursor: pointer;
+        }
+
+        .fa-circle-check {
+            color: rgb(0, 255, 0);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>LISTA DE TAREFAS!</h1>
+    <header>
+        <input type="text" name="texto" id="listadetarefas" placeholder="Digite sua Tarefa">
+        <button id="adicionar" onclick="adicionar()"><i class="fa-solid fa-check"></i></button>
+    </header>
+    <main id="items-container">
+    </main>
+    <script src="listadetarefas.js"></script>
+</body>
+
+</html>
