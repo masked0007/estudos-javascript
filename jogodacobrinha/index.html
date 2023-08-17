@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">n
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
 </head>
 <body>
-    <h1>Jogo da cobrinha com: html, css e javascript!</h1>
-    <div id="score--value">PONTOS: <span id="score" >00</span></div>
+    
+    <div id="score--value">PONTOS: <span id="score">00</span></div>
+
+    <div id="timeRegressive"></div>
+    <div  class="gobefore" id="goo">goo</div>
+
     <canvas id="spacearea" width="600" height="600"></canvas>
+
+    <div id="gameover">GAME OVER!</div>
+    <button id="continue" onclick="continuar()">CONTINUAR</button>
+
     <div id="divbuttons">
-    <button id="buttonStart" onclick="gameloop()"><i class="fa-solid fa-play"></i></button>
-    <button id="buttonStop"><i class="fa-solid fa-pause"></i></button>
+    <button id="buttonStart" onclick="timeStart()"><i class="fa-solid fa-play"></i></button>
     </div>
+
     <p id="text" style="color: antiquewhite;"></p>
     <script src="jogodasnake.js"></script>
 </body>
+
 </html>
