@@ -3,17 +3,21 @@
     A COBRA NÃO DEVE PASSAR DA AREA DAS COMIDAS (FEITO)
     SCORE DE QUANTAS FRUTAS A COBRA COMEU (FEITO)
     BOTÃO DE COMEÇAR COM UMA CONTAGEM DE 3 SEGUNDOS (FEITO)
-    A COBRA DEVE CORRER MAIS RÁPIDO A CADA COMIDA QUE COMER (NÃO FEITO)
-    POP-UP DE GAMEOVER (NÃO FEITO)
-    MODO LIGHT E DARK (NÃO FEITO)
+    POP-UP DE GAMEOVER (FEITO)
+    A COBRA DEVE CORRER MAIS RÁPIDO A CADA COMIDA QUE COMER (FEITO)
+    MODO LIGHT E DARK (FEITO)
 */ 
 const area = document.getElementById("spacearea");
 const contexto = area.getContext("2d");
 const size = 30;
+const scorediv = document.getElementById("score--value");
 const score = document.getElementById("score")
-const audio = new Audio('SnapInsta.io - Minecraft Comendo - Efeito Sonoro (128 kbps).mp3');
+const audioeat = new Audio('SnapInsta.io - Minecraft Comendo - Efeito Sonoro (128 kbps).mp3');
+const audiobackground = new Audio('audiobackground.mp3');
+const audiocountdown = new Audio('SnapInsta.io - Contagem Regressiva 3 Segundos (128 kbps).mp3')
 let testext = document.getElementById("text");
 let go = document.getElementById("goo");
+let snakeSpeed = 100;
 
 
 contexto.fillRect(0, 0, 600, 600);
@@ -93,6 +97,7 @@ const MoveSnake = () => {
     const checkifsnakeeat = () => {
         const head = snake[snake.length -1]
         if (head.x == foodSnake.x && head.y == foodSnake.y) {
+        snakeSpeed -= 9;
         incrementScore()
         snake.push(head)
         let x = randomposition()
@@ -104,7 +109,7 @@ const MoveSnake = () => {
         foodSnake.x = x
         foodSnake.y = y
         foodSnake.color = randomcolor()
-        audio.play()
+        audioeat.play()
     }
     };
     const checkcollision = () => {
@@ -112,14 +117,20 @@ const MoveSnake = () => {
         const LimitCanvas = 570;
         let gameoveralert = document.getElementById("gameover");
         let btn = document.getElementById("continue");
+        let overlay = document.getElementById("overlay");
 
         const CollisionLimit = head.x < 0 || head.x > LimitCanvas || head.y < 0 || head.y > LimitCanvas;
 
         if (CollisionLimit) {
             gameoveralert.style.display = "block";
-            document.body.classList.add("overlay");
-        }
-}
+            btn.style.display = "block";
+            area.classList.add("overlay");
+            score.classList.add("overlay");
+            scorediv.classList.add("overlay");
+            go.classList.add("overlay");
+            
+        };
+};
 
     const incrementScore = () => {
     score.innerText = parseInt(score.innerText) +1
@@ -130,6 +141,7 @@ const MoveSnake = () => {
         let count = 4;
         btnStart.style.display = "none";
         let countdown = setInterval (() => {
+            audiocountdown.play();
             count--
             timeregressive.textContent = count;
             if (count === 0) {
@@ -153,9 +165,27 @@ const gameloop = () => {
     checkcollision();
     loopid = setTimeout(() => {
         gameloop()
-    }, 100);
-    
+        audiobackground.play();
+    }, snakeSpeed); 
 };
+
+function continuar() {
+    window.location.reload();
+};
+
+function thememode() {
+    let moon1 = document.getElementById("moon1");
+    let body = document.body;
+    if (body.classList.contains("light")) {
+            body.classList.remove("light");
+            body.classList.add("body");
+    } else {
+        body.classList.remove("body")
+        body.classList.add("light")
+    }
+}
+
+
 //SNAKE MOVIMENTS BY PRESS THE KEYS:
 //MOVIMENTAÇÃO DA COBRA AO PRESSIONAR AS TECLAS:
 document.addEventListener("keydown", ({ key }) => {
