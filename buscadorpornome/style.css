@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Bebas+Neue&family=Russo+One&display=swap');
+
+body {
+    background-color: gray;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+#painel {
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.504);
+    display: block;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#email {
+    width: 300px;
+    height: 40px;
+    margin: 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#password {
+    width: 300px;
+    height: 40px;
+    margin: 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#submit {
+    font-size: 30px;
+    width: 50px;
+    color: lime;
+    height: 50px;
+    background-color: rgba(0, 255, 170, 0.612);
+    border: none;
+    border-radius: 5px;
+
+}
+
+#backgroundcolor {
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 800px;
+    height: 200px;
+    margin: auto;
+}
